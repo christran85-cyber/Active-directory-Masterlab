@@ -4,7 +4,7 @@
 
 This project demonstrates the deployment and administration of a Windows-based Active Directory environment designed to simulate core enterprise identity and infrastructure services.
 
-The lab was built using Windows Server 2019 and Windows 10 within VirtualBox and includes:
+The lab was built using Windows Server 2025 and Windows 11 within VirtualBox and includes:
 
 - Active Directory Domain Services (AD DS)
 - Domain Name System (DNS)
@@ -24,8 +24,8 @@ The objective of this project was to gain hands-on experience with identity mana
 | Component | Purpose |
 |------------|------------|
 | VirtualBox | Virtualization platform |
-| Windows Server 2019 | Domain Controller |
-| Windows 10 | Domain-joined client |
+| Windows Server 2025 | Domain Controller |
+| Windows 11 | Domain-joined client |
 | Active Directory | Identity and access management |
 | DNS | Internal name resolution |
 | DHCP | Dynamic IP assignment |
@@ -39,7 +39,7 @@ The objective of this project was to gain hands-on experience with identity mana
 
 ### Domain Controller
 
-The Windows Server 2019 system functions as the Domain Controller and hosts:
+The Windows Server 2025 system functions as the Domain Controller and hosts:
 
 - Active Directory Domain Services
 - DNS
@@ -49,7 +49,7 @@ The Windows Server 2019 system functions as the Domain Controller and hosts:
 
 ### Client Workstation
 
-The Windows 10 workstation:
+The Windows 11 workstation:
 
 - Receives IP configuration from DHCP
 - Uses domain DNS for name resolution
@@ -95,7 +95,7 @@ Configured to obtain IP configuration automatically through DHCP for internet ac
 
 The internal adapter provides connectivity for domain services while the external adapter allows controlled internet access for updates and testing.
 
-![image1](images/phase1.png)
+![image1](images/Phase1.png)
 
 ---
 
@@ -109,15 +109,15 @@ The AD DS role was installed through Server Manager and the server was promoted 
 
 | Setting | Value |
 |----------|----------|
-| Domain Name | streetrack.com |
-| Forest Functional Level | Windows Server 2016+ |
+| Domain Name | Yoshihara.com |
+| Forest Functional Level | Windows Server 2025+ |
 | Server Name | DC |
 
 ### Outcome
 
 The server was successfully promoted and configured as the first Domain Controller in a new forest.
 
-[Insert Screenshot]
+![image1](images/phase2.png)
 
 ---
 
@@ -132,7 +132,7 @@ Two Organizational Units were created:
 
 This structure separates administrative accounts from standard user accounts and provides granular policy targeting.
 
-[Insert Screenshot]
+![image1](images/Phase3.png)
 
 ## Create Administrative User
 
@@ -144,7 +144,7 @@ An administrative account was created and added to the Domain Admins group.
 - Assigned administrative privileges
 - Validated successful authentication
 
-[Insert Screenshot]
+![image1](images/Phase3-2.png)
 
 ---
 
@@ -170,7 +170,7 @@ The DHCP Server role was installed and authorized within Active Directory.
 
 Clients automatically receive valid IP configuration from the Domain Controller.
 
-[Insert Screenshot]
+![image1](images/phase4.png)
 
 ---
 
@@ -191,15 +191,15 @@ Routing and Remote Access Services (RRAS) was installed to provide internet conn
 
 Domain-joined systems can access external resources while remaining on the internal network.
 
-[Insert Screenshot]
+![image1](images/phase5.png)
 
 ---
 
 # Phase 6: Domain Join
 
-## Join Windows 10 Client to Domain
+## Join Windows 11 Client to Domain
 
-The Windows 10 workstation was joined to the Active Directory domain.
+The Windows 11 workstation was joined to the Active Directory domain.
 
 ### Verification
 
@@ -207,7 +207,7 @@ The Windows 10 workstation was joined to the Active Directory domain.
 - Domain credentials accepted
 - Successful authentication against Domain Controller
 
-[Insert Screenshot]
+![image1](images/phase6.png)
 
 ---
 
@@ -242,7 +242,7 @@ ping google.com
 - Internet connectivity verified
 - Domain authentication successful
 
-[Insert Screenshot]
+![image1](images/phase7.png)
 
 ---
 
@@ -278,7 +278,7 @@ To reduce manual account creation, a Python script was developed using the pyad 
 6. Set passwords
 7. Verify successful creation
 
-[Insert Screenshot]
+![image1](images/phase8.png)
 
 ---
 
@@ -320,7 +320,7 @@ gpupdate /force
 
 All restrictions were verified from the Windows 10 client workstation.
 
-[Insert Screenshot]
+![image1](images/phase9.png)
 
 ---
 
