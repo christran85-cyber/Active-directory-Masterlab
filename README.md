@@ -1,5 +1,5 @@
 # Active Directory Homelab
-
+![image1](images/front2.png)
 ## Overview
 
 This project demonstrates the deployment and administration of a Windows-based Active Directory environment designed to simulate core enterprise identity and infrastructure services.
