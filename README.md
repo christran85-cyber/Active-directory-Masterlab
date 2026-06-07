@@ -95,7 +95,7 @@ Configured to obtain IP configuration automatically through DHCP for internet ac
 
 The internal adapter provides connectivity for domain services while the external adapter allows controlled internet access for updates and testing.
 
-[Insert Screenshot]
+![image1](images/phase1.png)
 
 ---
 
