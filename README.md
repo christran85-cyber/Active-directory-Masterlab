@@ -226,7 +226,7 @@ ipconfig /all
 ### DNS Validation
 
 ```cmd
-nslookup streetrack.com
+nslookup Yoahihara.com
 ```
 
 ### Internet Connectivity
